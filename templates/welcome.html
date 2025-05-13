@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar-custom {
+            background-color: #343a40;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            border-color: #007bff;
+            margin-left: 10px;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .flip-card {
+            perspective: 1000px;
+        }
+        .flip-card-3d .flip-front,
+        .flip-card-3d .flip-back {
+            backface-visibility: hidden;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card-3d .flip-back {
+            transform: rotateY(180deg);
+        }
+        .flip-card-3d:hover .flip-front {
+            transform: rotateY(180deg);
+        }
+        .flip-card-3d:hover .flip-back {
+            transform: rotateY(360deg);
+        }
+        .map iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="#">Government First Grade College Shikaripura, Shikaripur</a>
+        <div class="ml-auto">
+            <button class="btn btn-custom" onclick="location.href='{{ url_for('login') }}'">Sign Up</button>
+            <button class="btn btn-custom" onclick="location.href='{{ url_for('login') }}'">Login</button>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Government First Grade College Shikaripura, Shikaripur</h1>
+        <div class="text-center mt-3">
+            <img src="{{ url_for('static', filename='images/clg.jpg') }}" class="img-fluid" alt="College Image">
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <h2>College Details</h2>
+                <p><strong>Address:</strong> Government First Grade College, Shikaripur-Masur Rd, Channakeshavanagar, Shikaripur, Karnataka, India, 577427</p>
+                <p><strong>Telephone:</strong> 08187-222217</p>
+                <p><strong>E-mail:</strong> <a href="mailto:gfgc_skp@yahoo.in">gfgc_skp@yahoo.in</a></p>
+                <p><strong>Website:</strong> <a href="http://gfgc.kar.nic.in/shikaripura/" target="_blank">gfgc.kar.nic.in/shikaripura/</a></p>
+                <p><strong>Other Popular Names:</strong> GFGC Shikaripura</p>
+                <p><strong>College Type:</strong> Arts & Science College</p>
+                <p><strong>University:</strong> Kuvempu University</p>
+                <p><strong>Tags:</strong> Co-Educational</p>
+
+                <h3 class="mt-4">Brief Description</h3>
+                <p>The Government First Grade College, Shikaripura was started in 1980 with the objective of bringing degree education within the reach of students from Shikaripura taluk. Shikaripura is a taluk head quarter in Shimoga district and also has a historical significance in the state which is promoting the culture and heritage of the state.</p>
+                <p>The college started with only B.A. and B.Com courses but has grown over the years in its curriculum as well as infrastructure. The college is offering streams in Arts, Commerce and Science combinations. The college aims to provide quality education to its students and possesses sufficient infrastructure for the same. The college is running PG courses in Kannada and Economics since 2010.</p>
+                <p>Recognition has been provided to the college under section 2(f) in 2001 and 12(b) of the UGC act in 2003. The college has B rating from NAAC in the year 2013. The teaching staff consists of more than 100 members and they are striving to achieve excellence in academics with their efforts. The objective of the staff as well as the college is to bring all round development in students. Thus the college is imparting quality education to the students.</p>
+
+                <section class="section" id="programsOffered">
+                    <div class="container-xxl container-xl container deco">
+                        <div class="row">
+                            <div class="col pt-5">
+                                <div class="heading heading-border heading-border313 heading-middle-border">
+                                    <h2 class="text-color-dark font-weight-bold1 text-6 mb-2">
+                                        <strong class="color2 font-weight-bold1 text-4">Courses Offered</strong>
+                                    </h2><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/bca.webp') }}" class="img-fluid" alt="BCA">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Computer Applications</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BCA</h4><br>
+                                            <p class="font-weight-light color2 text-center">A comprehensive program designed to equip students with essential computer application skills, preparing them for careers in IT and software development.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/bsc.webp') }}" class="img-fluid" alt="BSc">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Science</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BSc</h4><br>
+                                            <p class="font-weight-light color2 text-center">A multidisciplinary program offering a strong foundation in scientific principles and research methodologies, with specializations in various scientific fields.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/ba.png') }}" class="img-fluid" alt="BA">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Arts</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BA</h4><br>
+                                            <p class="font-weight-light color2 text-center">A versatile program that fosters critical thinking, communication skills, and cultural understanding across various disciplines in the humanities and social sciences.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row my-5 myy-5">
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/bswo.png') }}" class="img-fluid" alt="BSW">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Social Work</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BSW</h4><br>
+                                            <p class="font-weight-light color2 text-center">A program focused on developing skills for social service, advocacy, and community development, preparing students to address societal challenges and promote social justice.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/bcom.webp') }}" class="img-fluid" alt="BCom">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Commerce</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BCom</h4><br>
+                                            <p class="font-weight-light color2 text-center">A program designed to provide students with a strong foundation in business principles, accounting, finance, and economics, preparing them for careers in the corporate world.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600">
+                                <div class="card flip-card flip-card-3d text-center rounded-0">
+                                    <div class="flip-front">
+                                        <div class="flip-content">
+                                            <img src="{{ url_for('static', filename='images/bba.png') }}" class="img-fluid" alt="BBA">
+                                            <h4 class="font-weight-bold1 color text-4 mt-3">Bachelor of Business Administration</h4>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center">
+                                        <div class="flip-content">
+                                            <h4 class="font-weight-bold1 color6 text-7">BBA</h4><br>
+                                            <p class="font-weight-light color2 text-center">A comprehensive program that equips students with essential management and leadership skills, focusing on various aspects of business operations and strategies.</p><br>
+                                            <a href="{{ url_for('tech') }}" class="text-color-dark btn btn-light btn-modern font-weight-bold1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <h3 class="mt-4">Teaching Staff</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Course Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Dr A.B Umesh</td><td>Associate Professor</td><td>Kannada (Language)</td></tr>
+                        <tr><td>CHIDANANDA N YAMANAKKANAVAR</td><td>Associate Professor</td><td>Chemistry</td></tr>
+                        <tr><td>SUVARNA S MALGHAN</td><td>Assistant Professor</td><td>Mathematics</td></tr>
+                        <tr><td>D R RAMESH</td><td>Associate Professor</td><td>Chemistry</td></tr>
+                        <tr><td>CHANDRU K</td><td>Assistant Professor</td><td>Commerce</td></tr>
+                        <tr><td>YASHODHA S</td><td>Assistant Professor</td><td>History</td></tr>
+                        <tr><td>MALLIKARJUNA A M</td><td>Assistant Professor</td><td>Political Science</td></tr>
+                        <tr><td>SOWMYA B V</td><td>Assistant Professor</td><td>English (Language)</td></tr>
+                        <tr><td>NAGENDRAPPA K T</td><td>Assistant Professor</td><td>Political Science</td></tr>
+                        <tr><td>Dr. Manjula T</td><td>Assistant Professor</td><td>Sociology</td></tr>
+                        <tr><td>Dr. ASHWINI H BIDARALLI</td><td>Assistant Professor</td><td>Economics</td></tr>
+                        <tr><td>DR THIMMAPPA AK</td><td>Assistant Professor</td><td>Kannada (Language)</td></tr>
+                        <tr><td>MALLAPPA ADIVEPPA PUTTATAMMANAVAR</td><td>Assistant Professor</td><td>Commerce</td></tr>
+                        <tr><td>MOHAMED AJMAL M</td><td>Assistant Professor</td><td>Physics</td></tr>
+                        <tr><td>DR. HANUMANTHAPPA</td><td>Assistant Professor</td><td>Economics</td></tr>
+                        <tr><td>Dr NETRAVATHI</td><td>Assistant Professor</td><td>Economics</td></tr>
+                        <tr><td>SHILPA G M</td><td>Assistant Professor</td><td>Physics</td></tr>
+                        <tr><td>JOSHI G R</td><td>Assistant Professor</td><td>Commerce</td></tr>
+                        <tr><td>GEETA HADIMANI</td><td>Assistant Professor</td><td>Mathematics</td></tr>
+                        <tr><td>MANJUNATHA N S</td><td>Assistant Professor</td><td>Commerce</td></tr>
+                        <tr><td>KRISHNAPPA BADIGER</td><td>Assistant Professor</td><td>English (Language)</td></tr>
+                        <tr><td>SHIVARUDRAPPA D</td><td>Assistant Professor</td><td>English (Language)</td></tr>
+                        <tr><td>SHEELA N S</td><td>Assistant Professor</td><td>Computer Science</td></tr>
+                        <tr><td>ROOPA G K</td><td>Assistant Professor</td><td>Kannada (Language)</td></tr>
+                        <tr><td>Saritha N</td><td>Assistant Professor</td><td>Computer Science</td></tr>
+                        <tr><td>JAGADEESHA P</td><td>Assistant Professor</td><td>Physics</td></tr>
+                        <tr><td>GOPALA B</td><td>Assistant Professor</td><td>Computer Science</td></tr>
+                        <tr><td>AJAYA KUMAR C H</td><td>Assistant Professor</td><td>Social Work</td></tr>
+                        <tr><td>NARASEGOWDA K</td><td>Assistant Professor</td><td>Kannada (Language)</td></tr>
+                        <tr><td>VINAY</td><td>Assistant Professor</td><td>Kannada (Language)</td></tr>
+                        <tr><td>PANDURANGA B</td><td>Assistant Professor</td><td>Social Work</td></tr>
+                        <tr><td>Dr. ANIL KUMAR A B</td><td>Physical Cultural Instructor</td><td>Physical Education</td></tr>
+                        <tr><td>ARUL KUMAR S</td><td>Librarian</td><td>Library Science</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="mt-4">Admission Procedure</h3>
+                <p>In order to be eligible for admission, you need to have cleared the 10+2 exam (PUC). Keep the following documents ready:</p>
+                <ul>
+                    <li>Application form (available on the college website)</li>
+                    <li>Transfer Certificate from 10+2 (2 Xerox copies)</li>
+                    <li>Marks sheet of 10+2 or PUC (2 Xerox copies)</li>
+                    <li>SSLC marks sheet (1 Xerox copy)</li>
+                    <li>Behavior certificate</li>
+                    <li>Income certificate not older than 5 years (2 Xerox copies)</li>
+                    <li>Caste certificate (2 Xerox copies)</li>
+                    <li>Aadhar Card (1 Xerox copy)</li>
+                    <li>Bank Pass book (1 Xerox copy)</li>
+                    <li>Envelope cover having 5 Rs. stamp (2 nos.)</li>
+                    <li>4 stamp size recent photographs</li>
+                </ul>
+                <p>You need to have a bank account with a nationalized bank.</p>
+
+                <h3 class="mt-4">Facilities Provided</h3>
+                <ul>
+                    <li>Free Laptop Scheme</li>
+                    <li>Students' Group Insurance</li>
+                    <li>Endowment</li>
+                    <li>Incentives for sports persons</li>
+                    <li>Students Counselling Centre</li>
+                    <li>Placement Cell</li>
+                    <li>Canteen</li>
+                    <li>Grievance Redressal Cell</li>
+                    <li>Women Empowerment Cell</li>
+                    <li>Sexual Harassment Redressal Cell</li>
+                </ul>
+
+                <h3 class="mt-4">Financial Support to Students</h3>
+                <ul>
+                    <li>C. V. Raman scholarship</li>
+                    <li>SC/ST Scholarships</li>
+                    <li>Minorities scholarship</li>
+                    <li>Sanchi Honnamma scholarship</li>
+                    <li>Fee reimbursement (For girls)</li>
+                    <li>Fee concession</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="map">
+                    <div class="title"><h3><a itemprop="hasMap" href="https://www.google.com/maps/search/?api=1&query=Government+First+Grade+College+Shikaripura+Shikaripur" target="_blank" rel="nofollow">Map of Government First Grade College Shikaripura, Shikaripur</a></h3></div>
+                    <iframe width="100%" height="450" frameborder="0" style="border:0" allowfullscreen class="lazyload" data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC08CLEWAc7VTI8uoiV9xY43hPYjZPPkmc&q=Government+First+Grade+College+Shikaripura+Shikaripur&zoom=18"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>   
+
+

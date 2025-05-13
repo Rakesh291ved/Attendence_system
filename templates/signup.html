@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-green-600">Signup</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required class="w-full mb-4 px-4 py-2 border rounded" />
+            <input type="password" name="password" placeholder="Password" required class="w-full mb-6 px-4 py-2 border rounded" />
+            <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Signup</button>
+        </form>
+        <p class="mt-4 text-center">Already have an account? <a href="/login" class="text-green-500">Login</a></p>
+        {% if error %}
+        <p class="text-red-500 text-center mt-4">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
